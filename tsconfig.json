@@ -1,0 +1,42 @@
+{
+  "compilerOptions": {
+    "target": "esnext",
+    "useDefineForClassFields": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "strict": true,
+    "jsx": "preserve",
+    "sourceMap": true,
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "lib": [
+      "esnext",
+      "dom"
+    ],
+    "types": [
+      "element-plus/global"
+    ],
+    // 用于设置解析非相对模块名称的基本目录，相对模块不会受到baseUrl的影响
+    "baseUrl": ".",
+    "paths": {
+      // 用于设置模块名到基于baseUrl的路径映射
+      "@/*": [
+        "src/*"
+      ],
+      "cpns/*": [
+        "src/components/*"
+      ]
+    }
+  },
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.d.ts",
+    "src/**/*.tsx",
+    "src/**/*.vue"
+  ],
+  "references": [
+    {
+      "path": "./tsconfig.node.json"
+    }
+  ]
+}
