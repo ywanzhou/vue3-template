@@ -15,16 +15,9 @@ const request = new Request({
   timeout: 1000 * 60 * 5,
   interceptors: {
     // 请求拦截器
-    requestInterceptors: config => {
-      console.log('实例请求拦截器')
-
-      return config
-    },
+    requestInterceptors: config => config,
     // 响应拦截器
-    responseInterceptors: result => {
-      console.log('实例响应拦截器')
-      return result
-    },
+    responseInterceptors: result => result,
   },
 })
 

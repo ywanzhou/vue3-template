@@ -1,6 +1,5 @@
 import axios from 'axios'
 import type { AxiosInstance, AxiosRequestConfig } from 'axios'
-console.log(import.meta.env.VITE_APP_API_BASE_URL)
 
 interface RequestInterceptors {
   // 请求拦截
