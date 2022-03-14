@@ -76,6 +76,8 @@ module.exports = defineConfig({
         registeredComponentsOnly: false,
       },
     ],
+    // 强制使用驼峰
+    camelcase: ['error', { properties: 'always' }],
     // 优先使用 const
     'prefer-const': [
       'error',
