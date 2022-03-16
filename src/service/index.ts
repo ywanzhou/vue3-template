@@ -23,12 +23,12 @@ const request = new Request({
 
 /**
  * @description: 函数的描述
- * @interface D 请求参数的interface
- * @interface T 响应结构的intercept
+ * @generic D 请求参数
+ * @generic T 响应结构
  * @param {YWZRequestConfig} config 不管是GET还是POST请求都使用data
  * @returns {Promise}
  */
-const ywzRequest = <D, T = any>(config: YWZRequestConfig<D>) => {
+const ywzRequest = <D = any, T = any>(config: YWZRequestConfig<D>) => {
   const { method = 'GET' } = config
   if (method === 'get' || method === 'GET') {
     config.params = config.data
