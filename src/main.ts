@@ -6,5 +6,8 @@ import router from './router'
 import store from './store'
 import './assets/css/index.css'
 import 'animate.css'
+// 单独引入 ElMessage 和 ElMessageBox 的样式
+import 'element-plus/theme-chalk/el-message.css'
+import 'element-plus/theme-chalk/el-message-box.css'
 
 createApp(App).use(router).use(store).mount('#app')
