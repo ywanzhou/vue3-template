@@ -1,13 +1,15 @@
 import Request from './request'
+import { AxiosResponse } from 'axios'
 
 import type { RequestConfig } from './request/types'
-interface YWZRequestConfig<T> extends RequestConfig {
-  data?: T
-}
+
 interface YWZResponse<T> {
   statusCode: number
   desc: string
   result: T
+}
+interface YWZRequestConfig<T> extends RequestConfig<YWZResponse<any>> {
+  data?: T
 }
 
 const request = new Request({
@@ -17,7 +19,9 @@ const request = new Request({
     // 请求拦截器
     requestInterceptors: config => config,
     // 响应拦截器
-    responseInterceptors: result => result,
+    responseInterceptors: (result: AxiosResponse) => {
+      return result
+    },
   },
 })
 
