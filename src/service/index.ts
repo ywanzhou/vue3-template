@@ -8,7 +8,7 @@ interface YWZResponse<T> {
   desc: string
   result: T
 }
-interface YWZRequestConfig<T> extends RequestConfig<YWZResponse<any>> {
+interface YWZRequestConfig<T, R> extends RequestConfig<YWZResponse<R>> {
   data?: T
 }
 
@@ -32,7 +32,7 @@ const request = new Request({
  * @param {YWZRequestConfig} config 不管是GET还是POST请求都使用data
  * @returns {Promise}
  */
-const ywzRequest = <D = any, T = any>(config: YWZRequestConfig<D>) => {
+const ywzRequest = <D = any, T = any>(config: YWZRequestConfig<D, T>) => {
   const { method = 'GET' } = config
   if (method === 'get' || method === 'GET') {
     config.params = config.data
