@@ -32,7 +32,10 @@ export default defineConfig(({ mode }: ConfigEnv) => {
       },
     },
     plugins: [
-      vue(),
+      vue({
+        // 默认开启响应性语法糖
+        reactivityTransform: true,
+      }),
       AutoImport({
         resolvers: [ElementPlusResolver()],
       }),
