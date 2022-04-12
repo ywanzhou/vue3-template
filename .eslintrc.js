@@ -67,6 +67,8 @@ module.exports = defineConfig({
     'vue/html-indent': 'off',
     // 关闭此规则 使用 prettier 的格式化规则，
     'vue/max-attributes-per-line': ['off'],
+    // vue3.2.25之后为props使用解耦赋值语法，删除警告
+    'vue/no-setup-props-destructure': 'off',
     // 优先使用驼峰，element 组件除外
     'vue/component-name-in-template-casing': [
       'error',
