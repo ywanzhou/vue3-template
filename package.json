@@ -1,7 +1,17 @@
 {
-  "name": "learn-vue3-cms",
+  "name": "vue3-template",
   "private": true,
-  "version": "0.0.1",
+  "version": "0.0.2",
+  "description": "a template vue3 repository",
+  "author": {
+    "name": "ywanzhou",
+    "email": "ywanzhou@qq.com",
+    "url": "https://juejin.cn/user/3350967174838701"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ywanzhou/vue3-template"
+  },
   "scripts": {
     "dev": "vite",
     "dev:open": "vite --open",
@@ -58,5 +68,9 @@
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
-  }
+  },
+  "engines": {
+    "node": ">= 16"
+  },
+  "license": "MIT"
 }
