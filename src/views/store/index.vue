@@ -7,17 +7,16 @@
     <el-button type="primary" size="default" @click="countStore.countAdd">
       +1
     </el-button>
-    <el-button type="primary" size="default" @click="countStore.countAdd">
+    <el-button type="primary" size="default" @click="countStore.countReduce">
       -1
     </el-button>
   </div>
 </template>
 <script setup lang="ts">
-import { computed } from 'vue'
 import { useCountStore } from '@/store'
 import { storeToRefs } from 'pinia'
 const countStore = useCountStore()
-// 通过计算属性
+// 通过计算属性实时获取数值
 const countComputed = computed(() => countStore.count)
 // 通过 storeToRefs api 结构
 const { doubleCount } = storeToRefs(countStore)
