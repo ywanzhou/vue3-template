@@ -71,6 +71,6 @@ npm run lint
 
 待更新
 
-## License
+## License🍚
 
-vue3-template is open source software licensed as MIT.
+vue3-template is open source software licensed as [MIT](./LICENSE)
