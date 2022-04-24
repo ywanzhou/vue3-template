@@ -23,10 +23,6 @@ export default defineConfig(({ mode }: ConfigEnv) => {
         '/api': {
           target: env.VITE_APP_API_BASE_URL,
           changeOrigin: true,
-          configure: (proxy, options) => {
-            // proxy 是 'http-proxy' 的实例
-            console.log(proxy, options)
-          },
           rewrite: path => path.replace(/^\/api/, ''),
         },
       },
@@ -38,9 +34,21 @@ export default defineConfig(({ mode }: ConfigEnv) => {
       }),
       AutoImport({
         resolvers: [ElementPlusResolver()],
+        // 自定引入 Vue VueRouter API,如果还需要其他的可以自行引入
+        imports: ['vue', 'vue-router'],
+        // 调整自动引入的文件位置
+        dts: 'src/type/auto-import.d.ts',
+        // 解决自动引入eslint报错问题 需要在eslintrc的extend选项中引入
+        eslintrc: {
+          enabled: true,
+          // 配置文件的位置
+          filepath: './.eslintrc-auto-import.json',
+          globalsPropValue: true,
+        },
       }),
       Components({
         resolvers: [ElementPlusResolver()],
+        dts: 'src/type/components.d.ts',
       }),
     ],
   }

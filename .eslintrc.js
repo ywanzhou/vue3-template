@@ -26,6 +26,7 @@ module.exports = defineConfig({
     'plugin:@typescript-eslint/recommended', // typescript-eslint推荐规则,
     'prettier',
     'plugin:prettier/recommended',
+    './.eslintrc-auto-import.json',
   ],
   // https://cn.eslint.org/docs/rules/
   rules: {
