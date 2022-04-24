@@ -8,10 +8,7 @@
     "email": "ywanzhou@qq.com",
     "url": "https://juejin.cn/user/3350967174838701"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/ywanzhou/vue3-template"
-  },
+  "license": "MIT",
   "scripts": {
     "dev": "vite",
     "dev:open": "vite --open",
@@ -70,7 +67,10 @@
     }
   },
   "engines": {
-    "node": ">= 16"
+    "node": ">= 16.9.0"
   },
-  "license": "MIT"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ywanzhou/vue3-template"
+  }
 }
