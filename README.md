@@ -13,6 +13,9 @@
 6. **ESlint+Prettier** 已经配置完成
 7. Git **提交前验证**以及**提交规范**已做好
 8. 封装的比较完善的 axios
+9. Vue和VueRouter的API自动引入，你还可以配置更多的API自动引入
+10. 
+11. 
 
 
 ## clone🐉
@@ -67,3 +70,7 @@ npm run lint
 ## 使用说明:pencil:
 
 待更新
+
+## License
+
+vue3-template is open source software licensed as MIT.
