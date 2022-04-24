@@ -7,3 +7,7 @@ export interface IGetRes {
   areaid: string
   dayList: any[]
 }
+
+export interface IMockLoginRes {
+  name: string
+}

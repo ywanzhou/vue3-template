@@ -15,10 +15,21 @@
 <script setup lang="ts">
 import { useCountStore } from '@/store'
 import { storeToRefs } from 'pinia'
+import {
+  getUserList,
+  getRoleList,
+  getPermissionList,
+  getUserDetail,
+} from '@/api/mock'
 const countStore = useCountStore()
 // 通过计算属性实时获取数值
 const countComputed = computed(() => countStore.count)
 // 通过 storeToRefs api 结构
 const { doubleCount } = storeToRefs(countStore)
+getUserList({})
+getRoleList({})
+getPermissionList({})
+getUserDetail({ id: 0 })
+getUserDetail({ id: 1 })
 </script>
 <style scoped></style>
