@@ -3,11 +3,13 @@ import { AxiosResponse } from 'axios'
 
 import type { RequestConfig } from './request/types'
 
-interface YWZResponse<T> {
+export interface YWZResponse<T> {
   statusCode: number
   desc: string
   result: T
 }
+
+// 重写返回类型
 interface YWZRequestConfig<T, R> extends RequestConfig<YWZResponse<R>> {
   data?: T
 }

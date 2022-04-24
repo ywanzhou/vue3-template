@@ -1,27 +1,10 @@
 import request from '@/service'
-interface Req {
-  apiKey: string
-  area?: string
-  areaID?: string
-}
-interface Res {
-  area: string
-  areaCode: string
-  areaid: string
-  dayList: any[]
-}
-export const get15DaysWeatherByArea = (data: Req) => {
-  return request<Req, Res>({
-    url: '/api/common/weather/get15DaysWeatherByArea',
+import type { IGetParams, IGetRes } from './types'
+export type { IGetParams, IGetRes } from './types'
+export const getAddrs = (data: IGetParams) => {
+  return request<IGetParams, IGetRes>({
+    url: '/api/common/postcode/getAddrs',
     method: 'GET',
     data,
-    interceptors: {
-      requestInterceptors(res) {
-        return res
-      },
-      responseInterceptors(result) {
-        return result
-      },
-    },
   })
 }
