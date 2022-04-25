@@ -1,33 +1,33 @@
+<script lang="ts" setup>
+import { useUserStore } from '@/store'
+const activeIndex = ref('/main/dashboard/workplace')
+const menuList = computed(() => {
+  return useUserStore().menuList
+})
+</script>
 <template>
   <el-menu
     :default-active="activeIndex"
     class="el-menu-demo"
+    router
     mode="horizontal"
-    @select="handleSelect"
   >
-    <el-menu-item index="1">Processing Center</el-menu-item>
-    <el-sub-menu index="2">
-      <template #title>Workspace</template>
-      <el-menu-item index="2-1">item one</el-menu-item>
-      <el-menu-item index="2-2">item two</el-menu-item>
-      <el-menu-item index="2-3">item three</el-menu-item>
-      <el-sub-menu index="2-4">
-        <template #title>item four</template>
-        <el-menu-item index="2-4-1">item one</el-menu-item>
-        <el-menu-item index="2-4-2">item two</el-menu-item>
-        <el-menu-item index="2-4-3">item three</el-menu-item>
+    <template v-for="menu in menuList" :key="menu.id">
+      <!-- 没有子路由的情况 -->
+      <el-menu-item v-if="!menu.children" :index="'/main' + menu.path">
+        <span>{{ menu.name }}</span>
+      </el-menu-item>
+
+      <!-- 存在子路由的情况 -->
+      <el-sub-menu v-else :index="'/main' + menu.path">
+        <template #title>{{ menu.name }}</template>
+        <el-menu-item
+          v-for="_menu in menu.children"
+          :key="_menu.id"
+          :index="'/main' + _menu.path"
+          >{{ _menu.name }}</el-menu-item
+        >
       </el-sub-menu>
-    </el-sub-menu>
-    <el-menu-item index="3" disabled>Info</el-menu-item>
-    <el-menu-item index="4">Orders</el-menu-item>
+    </template>
   </el-menu>
 </template>
-
-<script lang="ts" setup>
-import { ref } from 'vue'
-
-const activeIndex = ref('1')
-const handleSelect = (key: string, keyPath: string[]) => {
-  console.log(key, keyPath)
-}
-</script>
