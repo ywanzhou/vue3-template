@@ -19,8 +19,8 @@ const defaultOption: IUseRequestOption = {
   onFinish: undefined,
 }
 const useRequest = <
-  PromiseRequestType = any,
   ParamType = any,
+  PromiseRequestType = any,
   DataType = YWZResponse<PromiseRequestType>,
 >(
   PromiseRequest: (p: ParamType) => Promise<DataType>,
