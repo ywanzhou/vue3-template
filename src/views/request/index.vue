@@ -1,10 +1,9 @@
 <script setup lang="ts">
 import { useRequest } from '@/hooks'
-import { getAddrs, IGetRes, IGetParams } from '@/api/index'
-const { data, loading, run, runParams } = useRequest<IGetRes, IGetParams>(
-  getAddrs,
-  { apiKey: import.meta.env.VITE_APP_KEY },
-)
+import { getAddrs } from '@/api/index'
+const { data, loading, run, runParams } = useRequest(getAddrs, {
+  apiKey: import.meta.env.VITE_APP_KEY,
+})
 console.log(data, loading, run)
 const handleAgainRequest = () => {
   // 手动调用

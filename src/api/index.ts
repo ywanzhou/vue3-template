@@ -1,4 +1,5 @@
 import request from '@/service'
+import { useRequest } from '@/hooks'
 import type { IGetParams, IGetRes } from './types'
 export type { IGetParams, IGetRes } from './types'
 export const getAddrs = (data: IGetParams) => {
@@ -7,4 +8,7 @@ export const getAddrs = (data: IGetParams) => {
     method: 'GET',
     data,
   })
+}
+export const useGetAddr = (data: IGetParams) => {
+  return useRequest<IGetParams>(getAddrs, data)
 }
