@@ -25,7 +25,7 @@ export const roleList = [
     id: 0,
     name: 'superAdmin',
     // 权限列表的id
-    permission: [0, 1, 2, 3, 4, 5, 6, 7, 8],
+    permission: [0, 1, 2, 3, 4, 5, 6, 7],
     permissionNames: [],
     createTime: '2022-05-05',
     updateTime: '2022-05-05',
@@ -34,7 +34,7 @@ export const roleList = [
     id: 1,
     name: 'admin',
     // 权限列表的id
-    permission: [0, 1, 2, 3, 4, 5, 6],
+    permission: [0, 1, 2, 3, 4, 5],
     permissionNames: [],
     createTime: '2022-05-05',
     updateTime: '2022-05-05',
@@ -43,7 +43,7 @@ export const roleList = [
     id: 2,
     name: 'user',
     // 权限列表的id
-    permission: [0, 1, 2, 3, 4, 5],
+    permission: [0, 1, 3, 4],
     permissionNames: [],
     createTime: '2022-05-05',
     updateTime: '2022-05-05',
@@ -52,10 +52,10 @@ export const roleList = [
 export const permissionList = [
   {
     id: 0,
-    name: '仪表盘',
+    name: '工作台',
     type: 0,
     pid: null,
-    path: '/dashboard',
+    path: '/dashboard/workplace',
   },
   {
     id: 1,
@@ -73,41 +73,34 @@ export const permissionList = [
   },
   {
     id: 3,
-    name: '工作台',
-    type: 1,
-    pid: 0,
-    path: '/dashboard/workplace',
-  },
-  {
-    id: 4,
     name: '实时监控',
     type: 1,
     pid: 0,
     path: '/dashboard/monitor',
   },
   {
-    id: 5,
+    id: 4,
     name: 'ECharts图表',
     type: 1,
     pid: 1,
     path: '/visualization/echarts',
   },
   {
-    id: 6,
+    id: 5,
     name: '用户管理',
     type: 1,
     pid: 2,
     path: '/system/user',
   },
   {
-    id: 7,
+    id: 6,
     name: '角色管理',
     type: 1,
     pid: 2,
     path: '/system/role',
   },
   {
-    id: 8,
+    id: 7,
     name: '权限管理',
     type: 1,
     pid: 2,
