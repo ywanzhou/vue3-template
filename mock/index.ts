@@ -97,8 +97,9 @@ const mockList: MockMethod[] = [
           result: null,
         }
       }
+      const _userList = JSON.parse(JSON.stringify(userList))
       // 获取用户
-      const user = userList.find(u => u.id === parseInt(id))
+      const user = _userList.find(u => u.id === parseInt(id))
       // 获取用户权限
       const permissionIdS = roleList.find(
         r => r.id === user.role.roleId,

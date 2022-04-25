@@ -19,13 +19,23 @@ export const userList = [
     createTime: '2022-05-05',
     updateTime: '2022-05-05',
   },
+  {
+    id: 2,
+    name: '笨小贝',
+    role: {
+      roleId: 2,
+      name: 'user',
+    },
+    createTime: '2022-05-05',
+    updateTime: '2022-05-05',
+  },
 ]
 export const roleList = [
   {
     id: 0,
     name: 'superAdmin',
     // 权限列表的id
-    permission: [0, 1, 2, 3, 4, 5, 6, 7],
+    permission: [0, 1, 2, 4, 5, 6, 7],
     permissionNames: [],
     createTime: '2022-05-05',
     updateTime: '2022-05-05',
@@ -34,7 +44,7 @@ export const roleList = [
     id: 1,
     name: 'admin',
     // 权限列表的id
-    permission: [0, 1, 2, 3, 4, 5],
+    permission: [0, 1, 2, 4, 5],
     permissionNames: [],
     createTime: '2022-05-05',
     updateTime: '2022-05-05',
@@ -43,7 +53,7 @@ export const roleList = [
     id: 2,
     name: 'user',
     // 权限列表的id
-    permission: [0, 1, 3, 4],
+    permission: [0, 1, 4],
     permissionNames: [],
     createTime: '2022-05-05',
     updateTime: '2022-05-05',
@@ -70,13 +80,6 @@ export const permissionList = [
     type: 0,
     pid: null,
     path: '/system',
-  },
-  {
-    id: 3,
-    name: '实时监控',
-    type: 1,
-    pid: 0,
-    path: '/dashboard/monitor',
   },
   {
     id: 4,
