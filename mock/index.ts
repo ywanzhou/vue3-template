@@ -58,6 +58,7 @@ const mockList: MockMethod[] = [
     statusCode: 200,
     response: () => {
       roleList.forEach(role => {
+        role.permissionNames = []
         for (const i in role.permission) {
           role.permissionNames.push(
             permissionList.find(power => power.id === role.permission[i]).name,
