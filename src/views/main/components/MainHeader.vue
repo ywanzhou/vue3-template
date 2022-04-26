@@ -1,6 +1,8 @@
 <script lang="ts" setup>
 import { useUserStore } from '/@/store'
-const activeIndex = ref('/main/dashboard/workplace')
+const activeIndex = computed(() => {
+  return useRoute().path
+})
 const menuList = computed(() => {
   return useUserStore().menuList
 })

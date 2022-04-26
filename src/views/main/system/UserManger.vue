@@ -4,7 +4,6 @@ import YwzTable from '/@/components/ywz-table'
 import { ITableCol } from '/@/components/ywz-table/types'
 const store = useUserStore()
 const userList = computed(() => store.userList)
-console.log(userList.value)
 const columns: ITableCol[] = [
   { label: '用户名', prop: 'name' },
   { label: '创建时间', prop: 'updateTime' },
