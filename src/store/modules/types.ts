@@ -12,4 +12,5 @@ export interface IUser {
   roleList: IRoleList[]
   permissionList: IPermissionList[]
   userDetail?: IUserDetail
+  curId: number
 }

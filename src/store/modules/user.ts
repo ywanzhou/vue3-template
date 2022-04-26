@@ -19,6 +19,7 @@ export const useUserStore = defineStore({
       roleList: [],
       userList: [],
       userDetail: undefined,
+      curId: 0,
     }
   },
   // getters
@@ -33,7 +34,7 @@ export const useUserStore = defineStore({
       this.userList = (await getUserList()).result
       this.permissionList = (await getPermissionList()).result
       this.roleList = (await getRoleList()).result
-      this.userDetail = (await getUserDetail({ id: 0 })).result
+      this.userDetail = (await getUserDetail({ id: this.curId })).result
       // 动态添加路由
       if (this.menuList) {
         const routes = await menuToRoutes(this.menuList)
@@ -41,6 +42,10 @@ export const useUserStore = defineStore({
           router.addRoute('main', route)
         }
       }
+    },
+    changeId(id: number) {
+      this.curId = id
+      this.getData()
     },
   },
 })
