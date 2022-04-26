@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { useUserStore } from '@/store'
+import { useUserStore } from '/@/store'
 const activeIndex = ref('/main/dashboard/workplace')
 const menuList = computed(() => {
   return useUserStore().menuList

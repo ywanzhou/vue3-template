@@ -1,13 +1,13 @@
 import { defineStore } from 'pinia'
 // 获取路由实例
-import router from '@/router'
+import router from '/@/router'
 import {
   getPermissionList,
   getRoleList,
   getUserDetail,
   getUserList,
-} from '@/api/mock'
-import { menuToRoutes } from '@/utils/router'
+} from '/@/api/mock'
+import { menuToRoutes } from '/@/utils/router'
 import type { IUser } from './types'
 
 export const useUserStore = defineStore({

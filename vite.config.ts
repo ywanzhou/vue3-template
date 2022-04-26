@@ -12,8 +12,8 @@ export default defineConfig(({ mode }: ConfigEnv) => {
   return {
     resolve: {
       alias: {
-        '@': resolve(__dirname, 'src'),
-        cpns: resolve(__dirname, 'src/components'),
+        '/@': resolve(__dirname, 'src'),
+        '/cpns': resolve(__dirname, 'src/components'),
       },
       extensions: ['.js', '.json', '.ts', '.vue'], // 使用路径别名时想要省略的后缀名，可以自己 增减
     },

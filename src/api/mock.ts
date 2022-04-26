@@ -1,4 +1,4 @@
-import request from '@/service'
+import request from '/@/service'
 import type {
   IPermissionList,
   IRoleList,

@@ -405,8 +405,8 @@ export default defineConfig(({ mode }: ConfigEnv) => {
   "baseUrl": ".",
   "paths": {
     // 用于设置模块名到基于baseUrl的路径映射
-    "@/*": [ "src/*" ],
-    "cpns/*": [ "src/components/*" ]
+    "/@/*": [ "src/*" ],
+    "/cpns/*": [ "src/components/*" ]
   }
 },
 ```
@@ -792,7 +792,7 @@ export { useCountStore }
 </template>
 <script setup lang="ts">
 import { computed } from 'vue'
-import { useCountStore } from '@/store'
+import { useCountStore } from '/@/store'
 import { storeToRefs } from 'pinia'
 const countStore = useCountStore()
 // 通过计算属性
@@ -1040,7 +1040,7 @@ export interface CancelRequestSource {
 `src\api\index.ts`
 
 ```TypeScript
-import request from '@/service'
+import request from '/@/service'
 interface Req {
   apiKey: string
   area?: string

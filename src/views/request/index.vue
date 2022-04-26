@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { useRequest } from '@/hooks'
-import { getAddrs } from '@/api/index'
+import { useRequest } from '/@/hooks'
+import { getAddrs } from '/@/api/index'
 const { data, loading, run, runParams } = useRequest(getAddrs, {
   apiKey: import.meta.env.VITE_APP_KEY,
 })

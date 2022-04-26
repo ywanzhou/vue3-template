@@ -13,7 +13,7 @@
   </div>
 </template>
 <script setup lang="ts">
-import { useCountStore } from '@/store'
+import { useCountStore } from '/@/store'
 import { storeToRefs } from 'pinia'
 const countStore = useCountStore()
 // 通过计算属性实时获取数值

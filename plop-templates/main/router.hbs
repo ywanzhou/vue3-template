@@ -1,6 +1,3 @@
-const router = {
-  name: '{{ componentName }}',
-  path: '/main/{{pathName}}/{{ urlName }}',
-  component: () => import('@/views/main/{{pathName}}/{{ componentName }}.vue'),
-}
+const router = { name: '{{componentName}}', path: '/main/{{pathName}}/{{urlName}}',
+component: () => import('/@/views/main/{{pathName}}/{{componentName}}.vue'), }
 export default router
