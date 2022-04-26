@@ -2,7 +2,7 @@
 import { useAttrs } from 'vue'
 import type { ITableCol } from './../types'
 interface Props {
-  tableData?: any[] | undefined
+  tableData: any[] | undefined
   columnsList: ITableCol[]
 }
 const props = defineProps<Props>()
