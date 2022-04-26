@@ -3,20 +3,18 @@ import { useUserStore } from '/@/store'
 import YwzTable from '/@/components/ywz-table'
 import { ITableCol } from '/@/components/ywz-table/types'
 const store = useUserStore()
-const permissionList = computed(() => store.permissionList)
+const roleList = computed(() => store.roleList)
 const columns: ITableCol[] = [
-  { label: '标题', prop: 'name' },
-  { label: '类型', prop: 'type', slotName: 'type' },
-  { label: '路径', prop: 'path' },
+  { label: '角色名称', prop: 'name', width: 120 },
+  { label: '创建时间', prop: 'createTime', width: 120 },
+  { label: '权限列表', prop: 'permissionNames', slotName: 'per' },
 ]
 </script>
 
 <template>
-  <YwzTable :table-data="permissionList" :columns-list="columns">
-    <template #type="scoped">
-      <el-tag type="success">
-        {{ scoped.row.type === 0 ? '跟路由' : '二级路由' }}
-      </el-tag>
+  <YwzTable :table-data="roleList" :columns-list="columns">
+    <template #per="scoped">
+      {{ scoped.row.permissionNames.join(',') }}
     </template>
   </YwzTable>
 </template>
