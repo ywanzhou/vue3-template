@@ -1,0 +1,149 @@
+{
+  // Example:
+  "vue3.2+template scss...": {
+    "prefix": "vue3",
+    "body": [
+      "<script setup lang=\"ts\"></script>",
+      "<template>",
+      "  <div class=\"${2:$TM_FILENAME_BASE}\">${3:$TM_FILENAME_BASE}</div>",
+      "</template>",
+      "<style lang=\"${1|scss,less,postcss|}\" scoped></style>",
+      ""
+    ],
+    "description": "vue3.2+模板使用CSS预处理器"
+  },
+  "vue3.2+template": {
+    "prefix": "vue3",
+    "body": [
+      "<script setup lang=\"ts\"></script>",
+      "<template>",
+      "  <div class=\"${1:$TM_FILENAME_BASE}\">${2:$TM_FILENAME_BASE}</div>",
+      "</template>",
+      "<style scoped></style>",
+      ""
+    ],
+    "description": "vue3.2+"
+  },
+  "onBeforeMount": {
+    "prefix": "onBeforeMount",
+    "body": [
+      "onBeforeMount(() => {",
+      "  ${0}",
+      "})",
+    ],
+    "description": "onBeforeMount 钩子"
+  },
+  "onMounted": {
+    "prefix": "onMounted",
+    "body": [
+      "onMounted(() => {",
+      "  ${0}",
+      "})",
+    ],
+    "description": "onMounted 钩子"
+  },
+  "onBeforeUpdate": {
+    "prefix": "onBeforeUpdate",
+    "body": [
+      "onBeforeUpdate(() => {",
+      "  ${0}",
+      "})",
+    ],
+    "description": "onBeforeUpdate 钩子"
+  },
+  "onUpdated": {
+    "prefix": "onUpdated",
+    "body": [
+      "onUpdated(() => {",
+      "  ${0}",
+      "})",
+    ],
+    "description": "onUpdated 钩子"
+  },
+  "onBeforeUnmount": {
+    "prefix": "onBeforeUnmount",
+    "body": [
+      "onBeforeUnmount(() => {",
+      "  ${0}",
+      "})",
+    ],
+    "description": "onBeforeUnmount 钩子"
+  },
+  "onUnmounted": {
+    "prefix": "onUnmounted",
+    "body": [
+      "onUnmounted(() => {",
+      "  ${0}",
+      "})",
+    ],
+    "description": "onUnmounted 钩子"
+  },
+  "onErrorCaptured": {
+    "prefix": "onErrorCaptured",
+    "body": [
+      "onErrorCaptured(() => {",
+      "  ${0}",
+      "})",
+    ],
+    "description": "onErrorCaptured 钩子"
+  },
+  "onRenderTracked": {
+    "prefix": "onRenderTracked",
+    "body": [
+      "onRenderTracked(() => {",
+      "  ${0}",
+      "})",
+    ],
+    "description": "onRenderTracked 钩子"
+  },
+  "onRenderTriggered": {
+    "prefix": "onRenderTriggered",
+    "body": [
+      "onRenderTriggered(() => {",
+      "  ${0}",
+      "})",
+    ],
+    "description": "onRenderTriggered 钩子"
+  },
+  "onActivated": {
+    "prefix": "onActivated",
+    "body": [
+      "onActivated(() => {",
+      "  ${0}",
+      "})",
+    ],
+    "description": "onActivated 钩子"
+  },
+  "onDeactivated": {
+    "prefix": "onDeactivated",
+    "body": [
+      "onDeactivated(() => {",
+      "  ${0}",
+      "})",
+    ],
+    "description": "onDeactivated 钩子"
+  },
+  "computed-to-fun": {
+    "prefix": "computed-to-fun",
+    "body": [
+      "const ${1} = computed(() => {",
+      "  ${2}",
+      "})",
+    ],
+    "description": "setup中计算属性的函数写法"
+  },
+  "computed-to-obj": {
+    "prefix": "computed-to-obj",
+    "body": [
+      "const ${1} = computed({",
+      "  get: () => {",
+      "    ${2}",
+      "  },",
+      "  set: (val) => {",
+      "    ${3}",
+      "  },",
+      "})",
+    ],
+    "description": "setup中计算属性的对象写法"
+  },
+}
