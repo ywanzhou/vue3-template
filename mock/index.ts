@@ -35,7 +35,7 @@ const mockList: MockMethod[] = [
         statusCode: 200,
         desc: '登录成功',
         result: {
-          name: 'tom',
+          name: '一碗周',
         },
       }
     },

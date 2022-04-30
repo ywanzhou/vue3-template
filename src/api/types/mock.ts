@@ -28,5 +28,6 @@ export interface IRoleList {
   updateTime: string
 }
 export interface IUserDetail extends IUserList {
+  // 权限列表
   permissionList: PermissionList[]
 }
