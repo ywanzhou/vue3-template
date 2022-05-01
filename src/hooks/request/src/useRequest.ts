@@ -43,7 +43,6 @@ const useRequest = <
   const run = async (): Promise<void> => {
     loading.value = true
     // 调用请求方法
-    // 调用防抖、节流或者普通函数
     data.value = await PromiseRequest(params)
 
     loading.value = false
@@ -52,7 +51,6 @@ const useRequest = <
   const runParams = async (_params: ParamType): Promise<void> => {
     loading.value = true
     // 调用请求方法
-    // 调用防抖、节流或者普通函数
     data.value = await PromiseRequest(_params)
 
     loading.value = false
