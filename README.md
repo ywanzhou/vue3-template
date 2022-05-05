@@ -24,11 +24,11 @@
 
 这个是创建项目的第一步，可以按照我写的，你也可以随意发挥~
 
-方式一：点击[Use this template](https://github.com/dishait/tov-template/generate)按钮，直接使用这个模板；
+方式一：点击[Use this template](https://github.com/ywanzhou/vue3-template/generate)按钮，直接使用这个模板；
 
 方式二：使用 `git clone` 命名，命令如下：
 ```bash
-git clone https://github.com/dishait/tov-template.git
+git clone https://github.com/ywanzhou/vue3-template.git
 ```
 
 方式三：自行发挥~。
