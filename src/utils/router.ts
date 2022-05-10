@@ -45,7 +45,7 @@ export const menuToRoutes = (userMenu: any[]): Promise<RouteRecordRaw[]> => {
       // 2. 配置该权限的routes
       recurseGetRoute(userMenu, allRoutes, routes)
 
-      resolve(allRoutes)
+      resolve(routes)
     })
   })
 }
