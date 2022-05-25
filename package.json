@@ -29,7 +29,7 @@
   "dependencies": {
     "animate.css": "^4.1.1",
     "axios": "^0.26.0",
-    "element-plus": "^2.1.3",
+    "element-plus": "^2.2.2",
     "gsap": "^3.9.1",
     "pinia": "^2.0.11",
     "vue": "^3.2.25",
