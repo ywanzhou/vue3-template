@@ -7,7 +7,7 @@
 
 1. 这个是 **Vue3.2**的模板
 2. 支持 **Vite**
-3. UI框架是 **Element-Plus**
+3. UI框架是 **Element-Plus** 它已经支持暗黑模式
 4. CSS框架是 **TailwindCSS**
 5. 状态管理是 **Pinia**
 6. **ESlint+Prettier** 已经配置完成
