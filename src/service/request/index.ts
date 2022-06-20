@@ -91,6 +91,7 @@ class Request {
       // url存在保存取消请求方法和当前请求url
       if (url) {
         this.requestUrlList?.push(url)
+        // TODO 在axios0.22起，对CancelToken已经弃用，需要改成  AbortController 文档：https://axios-http.com/docs/cancellation
         config.cancelToken = new axios.CancelToken(c => {
           this.cancelRequestSourceList?.push({
             [url]: c,
