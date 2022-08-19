@@ -14,7 +14,7 @@
     "dev:open": "vite --open",
     "dev:host": "vite --host",
     "dev:host:open": "vite --host --open",
-    "build": "vue-tsc --noEmit && vite build",
+    "build": "vite build",
     "preview": "vite preview",
     "prepare": "husky install",
     "lint": "eslint src --fix --ext .js,.ts,.jsx,.tsx,.vue && prettier --write --ignore-unknown",
