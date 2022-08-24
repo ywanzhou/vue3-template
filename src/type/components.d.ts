@@ -5,12 +5,6 @@
 declare module 'vue' {
   export interface GlobalComponents {
     Chart: typeof import('./../components/three-line-pic/src/chart.vue')['default']
-    ElContainer: typeof import('element-plus/es')['ElContainer']
-    ElHeader: typeof import('element-plus/es')['ElHeader']
-    ElMain: typeof import('element-plus/es')['ElMain']
-    ElMenu: typeof import('element-plus/es')['ElMenu']
-    ElMenuItem: typeof import('element-plus/es')['ElMenuItem']
-    ElSubMenu: typeof import('element-plus/es')['ElSubMenu']
     YwzForm: typeof import('./../components/ywz-form/src/YwzForm.vue')['default']
     YwzTable: typeof import('./../components/ywz-table/src/YwzTable.vue')['default']
   }
