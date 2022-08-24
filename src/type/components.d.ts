@@ -5,6 +5,22 @@
 declare module 'vue' {
   export interface GlobalComponents {
     Chart: typeof import('./../components/three-line-pic/src/chart.vue')['default']
+    DDay: typeof import('./../components/three-line-pic/src/DDay.vue')['default']
+    DMonth: typeof import('./../components/three-line-pic/src/DMonth.vue')['default']
+    ElContainer: typeof import('element-plus/es')['ElContainer']
+    ElDialog: typeof import('element-plus/es')['ElDialog']
+    ElHeader: typeof import('element-plus/es')['ElHeader']
+    ElMain: typeof import('element-plus/es')['ElMain']
+    ElMenu: typeof import('element-plus/es')['ElMenu']
+    ElMenuItem: typeof import('element-plus/es')['ElMenuItem']
+    ElOption: typeof import('element-plus/es')['ElOption']
+    ElRadioButton: typeof import('element-plus/es')['ElRadioButton']
+    ElRadioGroup: typeof import('element-plus/es')['ElRadioGroup']
+    ElSelect: typeof import('element-plus/es')['ElSelect']
+    ElSubMenu: typeof import('element-plus/es')['ElSubMenu']
+    JDay: typeof import('./../components/three-line-pic/src/JDay.vue')['default']
+    YwzCchart: typeof import('./../components/three-line-pic/src/YwzCchart.vue')['default']
+    YwzChart: typeof import('./../components/three-line-pic/src/YwzChart.vue')['default']
     YwzForm: typeof import('./../components/ywz-form/src/YwzForm.vue')['default']
     YwzTable: typeof import('./../components/ywz-table/src/YwzTable.vue')['default']
   }

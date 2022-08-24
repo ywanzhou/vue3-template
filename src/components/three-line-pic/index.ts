@@ -1,3 +1,4 @@
-import YwzChart from './src/chart.vue'
+import YwzChart from './src/YwzChart.vue'
 import dayConfig from './src/config/day'
-export { YwzChart, dayConfig }
+import monthConfig from './src/config/m'
+export { YwzChart, dayConfig, monthConfig }

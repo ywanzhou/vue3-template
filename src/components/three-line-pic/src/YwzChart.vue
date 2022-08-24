@@ -5,7 +5,7 @@
 </template>
 
 <script lang="ts" setup>
-import { ref, onMounted, nextTick } from 'vue'
+import { ref, onMounted, markRaw } from 'vue'
 import * as echarts from 'echarts'
 const props = defineProps({
   option: {
@@ -24,16 +24,16 @@ const props = defineProps({
 const myRef = ref<HTMLElement>()
 const chart = ref<any>()
 onMounted(() => {
-  nextTick(() => {
+  setTimeout(() => {
     // 初始化echarts实例
-    chart.value = echarts.init(myRef.value as HTMLElement)
+    chart.value = markRaw(echarts.init(myRef.value as HTMLElement))
     drawChart()
-  })
+  }, 500)
 })
 // 绘制折线图
 const drawChart = () => {
   // 父组件传来的实例参数
-  chart.value.setOption(props.option)
+  chart.value && chart.value.setOption(props.option)
 }
 window.addEventListener('resize', () => {
   //页面大小变化后Echarts也更改大小
@@ -42,7 +42,7 @@ window.addEventListener('resize', () => {
 watch(
   () => props.option,
   () => {
-    drawChart
+    drawChart()
   },
 )
 </script>
