@@ -4,6 +4,7 @@ specifiers:
   '@commitlint/cli': ^16.2.1
   '@commitlint/config-conventional': ^16.2.1
   '@types/echarts': ^4.9.16
+  '@types/lodash': ^4.14.184
   '@typescript-eslint/eslint-plugin': ^5.13.0
   '@typescript-eslint/parser': ^5.13.0
   '@vitejs/plugin-vue': ^2.2.0
@@ -23,6 +24,7 @@ specifiers:
   gsap: ^3.9.1
   husky: ^7.0.0
   lint-staged: ^12.3.4
+  lodash: ^4.17.21
   mockjs: ^1.1.0
   pinia: ^2.0.11
   plop: ^3.0.5
@@ -45,6 +47,7 @@ dependencies:
   echarts: 5.3.3
   element-plus: 2.2.14_vue@3.2.37
   gsap: 3.11.0
+  lodash: 4.17.21
   pinia: 2.0.20_j6bzmzd4ujpabbp5objtwxyjp4
   vue: 3.2.37
   vue-router: 4.1.4_vue@3.2.37
@@ -53,6 +56,7 @@ devDependencies:
   '@commitlint/cli': 16.3.0
   '@commitlint/config-conventional': 16.2.4
   '@types/echarts': 4.9.16
+  '@types/lodash': 4.14.184
   '@typescript-eslint/eslint-plugin': 5.34.0_euudt5oqhhodkyae5tf6wjmsda
   '@typescript-eslint/parser': 5.34.0_4rv7y5c6xz3vfxwhbrcxxi73bq
   '@vitejs/plugin-vue': 2.3.4_vite@2.9.15+vue@3.2.37
@@ -570,7 +574,6 @@ packages:
 
   /@types/lodash/4.14.184:
     resolution: {integrity: sha512-RoZphVtHbxPZizt4IcILciSWiC6dcn+eZ8oX9IWEYfDMcocdd42f7NPI6fQj+6zI8y4E0L7gu2pcZKLGTRaV9Q==}
-    dev: false
 
   /@types/minimist/1.2.2:
     resolution: {integrity: sha512-jhuKLIRrhvCPLqwPcx6INqmKeiA5EWrsCOPhrlFSrbrmU4ZMPjj5Ul/oLCMDO98XRUIwVm78xICz4EPCektzeQ==}
