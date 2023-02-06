@@ -1,4 +1,8 @@
-import type { AxiosResponse, InternalAxiosRequestConfig } from 'axios'
+import type {
+  AxiosResponse,
+  InternalAxiosRequestConfig,
+  CreateAxiosDefaults,
+} from 'axios'
 export interface RequestInterceptors<T> {
   // 请求拦截
   requestInterceptors?: (
@@ -10,6 +14,10 @@ export interface RequestInterceptors<T> {
   responseInterceptorsCatch?: (err: any) => any
 }
 // 自定义传入的参数
+export interface CreateRequestConfig<T = AxiosResponse>
+  extends CreateAxiosDefaults {
+  interceptors?: RequestInterceptors<T>
+}
 export interface RequestConfig<T = AxiosResponse>
   extends InternalAxiosRequestConfig {
   interceptors?: RequestInterceptors<T>
