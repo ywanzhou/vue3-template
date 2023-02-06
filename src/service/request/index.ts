@@ -1,5 +1,5 @@
 import axios, { AxiosResponse } from 'axios'
-import type { AxiosInstance, AxiosRequestConfig } from 'axios'
+import type { AxiosInstance, InternalAxiosRequestConfig } from 'axios'
 import type {
   RequestConfig,
   RequestInterceptors,
@@ -34,7 +34,7 @@ class Request {
     this.interceptorsObj = config.interceptors
     // 拦截器执行顺序 接口请求 -> 实例请求 -> 全局请求 -> 实例响应 -> 全局响应 -> 接口响应
     this.instance.interceptors.request.use(
-      (res: AxiosRequestConfig) => res,
+      (res: InternalAxiosRequestConfig) => res,
       (err: any) => err,
     )
 

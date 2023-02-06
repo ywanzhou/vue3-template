@@ -21,6 +21,7 @@ const routes: RouteRecordRaw[] = [
     path: '/main',
     component: () => import('/@/views/main/MainPage.vue'),
     redirect: '/main/dashboard/workplace',
+    children: [],
   },
   {
     name: 'request',

@@ -28,7 +28,7 @@
   },
   "dependencies": {
     "animate.css": "^4.1.1",
-    "axios": "^0.26.0",
+    "axios": "^1.3.2",
     "echarts": "^5.3.3",
     "element-plus": "^2.2.2",
     "gsap": "^3.9.1",
