@@ -11,9 +11,13 @@ class Request {
   instance: AxiosInstance
   // 拦截器对象
   interceptorsObj?: RequestInterceptors<AxiosResponse>
+  // * 存放取消请求控制器Map
+  abortControllerMap: Map<string, AbortController>
 
   constructor(config: CreateRequestConfig) {
     this.instance = axios.create(config)
+    // * 初始化存放取消请求控制器Map
+    this.abortControllerMap = new Map()
     this.interceptorsObj = config.interceptors
     // 拦截器执行顺序 接口请求 -> 实例请求 -> 全局请求 -> 实例响应 -> 全局响应 -> 接口响应
     this.instance.interceptors.request.use(
