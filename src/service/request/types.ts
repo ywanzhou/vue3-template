@@ -2,6 +2,7 @@ import type {
   AxiosResponse,
   InternalAxiosRequestConfig,
   CreateAxiosDefaults,
+  AxiosRequestConfig,
 } from 'axios'
 export interface RequestInterceptors<T> {
   // 请求拦截
@@ -18,8 +19,7 @@ export interface CreateRequestConfig<T = AxiosResponse>
   extends CreateAxiosDefaults {
   interceptors?: RequestInterceptors<T>
 }
-export interface RequestConfig<T = AxiosResponse>
-  extends InternalAxiosRequestConfig {
+export interface RequestConfig<T = AxiosResponse> extends AxiosRequestConfig {
   interceptors?: RequestInterceptors<T>
 }
 export interface CancelRequestSource {
