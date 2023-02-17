@@ -47,7 +47,10 @@ class Request {
     return new Promise((resolve, reject) => {
       // 如果我们为单个请求设置拦截器，这里使用单个请求的拦截器
       if (config.interceptors?.requestInterceptors) {
-        config = config.interceptors.requestInterceptors(config)
+        this.instance.interceptors.request.use(
+          config?.interceptors?.requestInterceptors,
+          config?.interceptors?.requestInterceptorsCatch,
+        )
       }
       this.instance
         .request<any, T>(config)

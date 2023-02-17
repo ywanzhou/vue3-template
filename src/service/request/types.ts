@@ -1,6 +1,7 @@
 import type {
   AxiosResponse,
   InternalAxiosRequestConfig,
+  AxiosRequestConfig,
   CreateAxiosDefaults,
 } from 'axios'
 export interface RequestInterceptors<T> {
@@ -18,8 +19,7 @@ export interface CreateRequestConfig<T = AxiosResponse>
   extends CreateAxiosDefaults {
   interceptors?: RequestInterceptors<T>
 }
-export interface RequestConfig<T = AxiosResponse>
-  extends InternalAxiosRequestConfig {
+export interface RequestConfig<T = AxiosResponse> extends AxiosRequestConfig {
   interceptors?: RequestInterceptors<T>
 }
 export interface CancelRequestSource {
