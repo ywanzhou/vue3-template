@@ -73,8 +73,8 @@ const useRequest = <
     // 判断是否开启防抖
     if (option.debounce)
       return {
-        run: debounce(run, option.throttleInterval) as () => Promise<void>,
-        runParams: debounce(runParams, option.throttleInterval) as (
+        run: debounce(run, option.debounceInterval) as () => Promise<void>,
+        runParams: debounce(runParams, option.debounceInterval) as (
           p: Params,
         ) => Promise<void>,
       }
