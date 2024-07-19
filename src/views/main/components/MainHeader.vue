@@ -1,7 +1,8 @@
 <script lang="ts" setup>
 import { useUserStore } from '/@/store'
 const activeIndex = computed(() => {
-  return useRoute().path
+  const router = useRoute()
+  return router?.path
 })
 const menuList = computed(() => {
   return useUserStore().menuList
